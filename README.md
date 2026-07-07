@@ -8,10 +8,10 @@ Senior Software Engineer (Node.js/JavaScript), operating at Staff scope · Cloud
 ![AWS](https://img.shields.io/badge/AWS-Lambda_%7C_DynamoDB_%7C_SQS-FF9900?logo=amazonaws&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-Service_Bus_%7C_Key_Vault-0078D4?logo=microsoftazure&logoColor=white)
 
-**TL;DR:** 12 years shipping backend/cloud systems at production scale
-(AWS, event-driven microservices, 3.5M-user platforms) — now building RAG
-and agentic systems from scratch, one layer at a time, to actually
-understand how they work rather than just call an API.
+12 years shipping backend/cloud systems at production scale (AWS,
+event-driven microservices, 3.5M-user platforms) — now building RAG and
+agentic systems from scratch, one layer at a time, to actually understand
+how they work rather than just call an API.
 
 I own problems end to end — from requirement discussions through system
 design to production on-call — and make sure the people around me grow
