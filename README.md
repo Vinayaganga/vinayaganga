@@ -15,6 +15,9 @@ just call an API. I own problems end to end, from requirements through
 system design to production on-call, and make sure the people around me
 grow along the way.
 
+**Jump to:** [Backend/cloud experience](#what-im-doing-day-to-day) ·
+[RAG systems](#currently-building-rag-systems-from-scratch-one-layer-at-a-time)
+
 ## What I'm doing day to day
 
 At **Intelex Technologies (Fortive)**, migrating a production SaaS platform
@@ -81,7 +84,20 @@ actually working?_
 Ingestion → embedding (Voyage AI) → retrieval → generation (Claude), plus a
 hand-rolled evaluation harness (Hit@k, MRR, LLM-as-judge) and hybrid search
 (BM25 + vector, fused via Reciprocal Rank Fusion, re-ranked with Voyage's
-rerank API).
+rerank API):
+
+```mermaid
+flowchart LR
+    Q[User query] --> QE[Embed query]
+    Q --> BM[BM25 keyword search]
+    QE --> VS[Vector search]
+    VS --> RRF[Reciprocal Rank Fusion]
+    BM --> RRF
+    RRF --> RR[Rerank - Voyage API]
+    RR --> CTX[Top-k context]
+    CTX --> LLM[Claude generation]
+    LLM --> ANS[Grounded answer + sources]
+```
 
 **[codebase-rag-assistant](https://github.com/Vinayaganga/codebase-rag-assistant)**
 _— what happens when the documents are code, not prose?_
