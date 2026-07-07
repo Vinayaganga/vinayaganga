@@ -78,6 +78,6 @@ them — in
 
 ## Skills
 
-Node.js · TypeScript · React · Angular · AWS (Lambda, DynamoDB, SNS/SQS, CloudWatch) · Azure (Service Bus, Key Vault) · Event-driven & microservice architecture · DynamoDB/SQL schema design · RAG & agentic tool-use
+Node.js · TypeScript · C#/.NET Core (ASP.NET) · React · Angular · AWS (Lambda, DynamoDB, SNS/SQS, CloudWatch) · Azure (Service Bus, Key Vault) · Event-driven & microservice architecture · DynamoDB/SQL schema design · RAG & agentic tool-use
 
 B.E. Computer Science, Visvesvaraya Technological University — AWS & Azure Fundamentals certified (Credly).
