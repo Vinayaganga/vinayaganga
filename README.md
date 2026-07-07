@@ -20,12 +20,12 @@ grow along the way.
 
 ## What I'm doing day to day
 
-At **Intelex Technologies (Fortive)** — a compliance-focused EHSQ (Environment,
-Health, Safety, Quality) SaaS platform used across manufacturing, healthcare,
-and energy — migrating a production system serving **1,400+ organisations
-and 3.5 million users** off a legacy .NET monolith onto event-driven Node.js
-microservices on AWS. Compliance and auditability aren't an afterthought
-here: see the audit-trail work below.
+At **Intelex Technologies (Fortive)** — an EHSQ (Environment, Health,
+Safety, Quality) SaaS platform used across manufacturing, healthcare, and
+energy — migrating a production system serving **1,400+ organisations and
+3.5 million users** off a legacy .NET monolith onto event-driven Node.js
+microservices on AWS. Auditability is a real requirement here, not an
+afterthought: see the audit-trail work below.
 
 A few of the numbers behind that:
 
