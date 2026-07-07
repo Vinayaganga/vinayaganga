@@ -99,8 +99,9 @@ _— what if the model decided when and how many times to search?_
 A tool-use loop instead of a fixed one-shot retrieve — ask it something
 that spans two topics and the trace shows two separate searches.
 
-Real output from that last one — one question, two topics, two searches
-the model decided to make on its own:
+Real trace from that last one — one question, two topics, two searches the
+model decided to make on its own (`answer` abridged here; the real response
+is a full markdown comparison table):
 
 ```
 $ curl -X POST localhost:3002/ask -d '{"query": "Compare how the
@@ -112,10 +113,9 @@ $ curl -X POST localhost:3002/ask -d '{"query": "Compare how the
     { "tool": "search_documents", "query": "notification service retry failures", "resultCount": 3 },
     { "tool": "search_documents", "query": "billing service retry failures", "resultCount": 3 }
   ],
-  "answer": "Notification Service: 3 retries, exponential backoff
-             (1s → 4s → 16s), then dead-letter queue.
-             Billing Service: 3 retries, fixed 48h apart across a
-             7-day grace period, then downgrade to Free tier."
+  "answer": "Notification Service: 3 retries, exponential backoff (1s→4s→16s),
+             then dead-letter queue. Billing Service: 3 retries, fixed 48h
+             apart across a 7-day grace period, then downgrade to Free tier. [...]"
 }
 ```
 
