@@ -6,8 +6,7 @@ Full-Stack Engineer (Node.js/JavaScript) · Tech Lead & Staff Engineer · Cloud 
 
 ![Node.js](https://img.shields.io/badge/Node.js-ESM-339933?logo=node.js&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-Lambda_%7C_DynamoDB_%7C_SQS-FF9900?logo=amazonaws&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-Sonnet-D97757?logo=anthropic&logoColor=white)
-![Voyage AI](https://img.shields.io/badge/Embeddings-Voyage_AI-6E56CF)
+![Azure](https://img.shields.io/badge/Azure-Service_Bus_%7C_Key_Vault-0078D4?logo=microsoftazure&logoColor=white)
 
 12 years in, with deep roots in Node.js and the JavaScript/TypeScript
 ecosystem and full-stack range across React, Angular, and cloud-native
@@ -41,6 +40,9 @@ workflows (Novigo Solutions).
 
 ## Currently building: RAG systems, from scratch, one layer at a time
 
+![Claude](https://img.shields.io/badge/Claude-Sonnet-D97757?logo=anthropic&logoColor=white)
+![Voyage AI](https://img.shields.io/badge/Embeddings-Voyage_AI-6E56CF)
+
 Three connected repos, each answering one question a typical "retrieve
 top-k, ask an LLM" tutorial glosses over:
 
@@ -68,16 +70,6 @@ them — in
 
 ## Skills
 
-- **Languages & Runtime:** Node.js, JavaScript/TypeScript, C#, .NET Core, ASP.NET
-- **Cloud & Infrastructure:** AWS (Lambda, API Gateway, DynamoDB, SNS, SQS, CloudWatch), Azure (Service Bus, Key Vault), Docker
-- **Architecture:** Event-driven systems, microservices, serverless, distributed systems, async pipelines, CI/CD
-- **Databases:** DynamoDB (schema design, access patterns), SQL Server, MySQL
-- **Frontend:** React, Angular
-- **AI/GenAI:** RAG pipelines, embeddings, Anthropic SDK, prompt engineering, agentic tool-use
-- **Practices:** Observability, root-cause analysis, system design, production reliability, technical mentorship
+Node.js · TypeScript · C#/.NET Core · React · Angular · AWS (Lambda, DynamoDB, SNS/SQS, CloudWatch) · Azure (Service Bus, Key Vault) · Event-driven & microservice architecture · DynamoDB/SQL schema design · RAG & agentic tool-use
 
-## Certifications & Education
-
-- Microsoft Azure Fundamentals Certification Course, 2nd Edition — O'Reilly Media (verified on Credly)
-- Amazon Web Services (AWS), 3rd Edition — O'Reilly Media (verified on Credly)
-- B.E., Computer Science & Engineering — Visvesvaraya Technological University, 2013
+B.E. Computer Science, Visvesvaraya Technological University — AWS & Azure Fundamentals certified (Credly).
