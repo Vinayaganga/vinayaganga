@@ -40,6 +40,11 @@ A few of the numbers behind that:
 - **Set and enforced code-review/architecture standards for a team of 10**
   — nothing merges without sign-off — and built a structured-pairing
   program that ramped 5+ engineers, including a QA→developer transition.
+- **Built reusable modernization infrastructure for the legacy .NET platform**
+  ahead of the Node.js migration — a versioned CSS-overlay system (with
+  caching) letting users select and apply different UI skins without a full
+  rewrite, a NuGet package publishing audit-trail data to AWS Glue, and a
+  base framework for incrementally rendering legacy ASP pages through React.
 
 Before this: led an 8-engineer team through a monolith-to-microservices
 migration on a manufacturing EHS platform (ThoughtFocus), and built KYC/
