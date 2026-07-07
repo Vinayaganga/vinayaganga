@@ -10,12 +10,10 @@ Senior Software Engineer (Node.js/JavaScript), operating at Staff scope · Cloud
 
 12 years shipping backend/cloud systems at production scale (AWS,
 event-driven microservices, 3.5M-user platforms) — now building RAG and
-agentic systems from scratch, one layer at a time, to actually understand
-how they work rather than just call an API.
-
-I own problems end to end — from requirement discussions through system
-design to production on-call — and make sure the people around me grow
-along the way.
+agentic systems from scratch to understand how they actually work, not
+just call an API. I own problems end to end, from requirements through
+system design to production on-call, and make sure the people around me
+grow along the way.
 
 ## What I'm doing day to day
 
@@ -57,18 +55,14 @@ Led a team of 8 engineers building high-availability manufacturing systems.
   platform — decomposed a tightly coupled legacy codebase into
   independently deployable services, letting teams ship without
   cross-team coordination for the first time.
-- **Architected event-driven processing on Azure Service Bus** — decoupled
-  async workloads across manufacturing modules, eliminating synchronous
-  bottlenecks that caused timeout failures under peak load.
 - **Re-architected reporting APIs and optimized LINQ/SQL Server queries**
   — eliminated N+1 patterns and missing indexes, cutting report load times
   from ~60s to 3–4s and removing timeout failures entirely.
-- **Hardened secret management** by migrating credentials to Azure Key
-  Vault — met compliance requirements and removed all plaintext secrets
-  from codebases.
-- **Established team-wide design reviews and code-review standards**,
-  mentoring 3 engineers from task-level execution to system design
-  ownership — two were promoted during tenure.
+
+Also architected event-driven processing on Azure Service Bus, hardened
+secret management via Azure Key Vault, and established team-wide
+design/code-review standards while mentoring 3 engineers into system
+design roles (two promoted during tenure).
 
 Earlier: built KYC/payment-gateway integrations handling idempotent retries
 in financial workflows (Novigo Solutions).
@@ -99,9 +93,8 @@ _— what if the model decided when and how many times to search?_
 A tool-use loop instead of a fixed one-shot retrieve — ask it something
 that spans two topics and the trace shows two separate searches.
 
-Real trace from that last one — one question, two topics, two searches the
-model decided to make on its own (`answer` abridged here; the real response
-is a full markdown comparison table):
+Real trace from that last query — two topics, two searches, no manual
+routing (`answer` abridged; real response is a full markdown table):
 
 ```
 $ curl -X POST localhost:3002/ask -d '{"query": "Compare how the
