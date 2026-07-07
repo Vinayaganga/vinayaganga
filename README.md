@@ -1,55 +1,83 @@
-### Hi, I'm Vinayaganga
+### Vinayaganga Panjaje
 
-I've been taking RAG (Retrieval-Augmented Generation) apart piece by piece —
-not just building "a RAG app," but treating each layer (chunking,
-retrieval, evaluation, agentic search) as its own thing worth getting right
-and being able to explain.
+Full-Stack Engineer (Node.js/JavaScript) · Tech Lead & Staff Engineer · Cloud · System Design
+
+[vinayaganga@gmail.com](mailto:vinayaganga@gmail.com) · [linkedin.com/in/vinayaganga](https://linkedin.com/in/vinayaganga) · Bangalore, India
 
 ![Node.js](https://img.shields.io/badge/Node.js-ESM-339933?logo=node.js&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-Lambda_%7C_DynamoDB_%7C_SQS-FF9900?logo=amazonaws&logoColor=white)
 ![Claude](https://img.shields.io/badge/Claude-Sonnet-D97757?logo=anthropic&logoColor=white)
 ![Voyage AI](https://img.shields.io/badge/Embeddings-Voyage_AI-6E56CF)
-![Express](https://img.shields.io/badge/Express-API-000000?logo=express&logoColor=white)
 
-## The arc: three repos, one question each
+12 years in, with deep roots in Node.js and the JavaScript/TypeScript
+ecosystem and full-stack range across React, Angular, and cloud-native
+backend architecture. I own problems end to end — from requirement
+discussions through system design to production on-call — and make sure
+the people around me grow along the way.
 
-Each project exists to answer one specific question a plain "retrieve top-k,
-ask Claude" tutorial glosses over.
+## What I'm doing day to day
+
+At **Intelex Technologies (Fortive)**, migrating a production SaaS platform
+serving **1,400+ organisations and 3.5 million users** off a legacy .NET
+monolith onto event-driven Node.js microservices on AWS.
+
+A few of the numbers behind that:
+
+- Redesigned a **DynamoDB schema across a 2TB dataset** — cut p95 read
+  latency from ~800ms to ~200ms (75%) and eliminated hot-partition failures.
+- Diagnosed a stored procedure running synchronously for ~1 hour that was
+  timing out every API call after 120s; redesigned it as an async job,
+  cutting execution to ~20 minutes and API response time to 2–3 seconds.
+- Built a notification microservice processing **100,000+ notifications/day**
+  with reliable retries and dead-letter queues, and an append-only
+  audit-trail service with full replay capability for compliance.
+- Code-review gatekeeper for a team of 10; mentored 5+ engineers through
+  structured pairing, including coaching a QA engineer into a developer role.
+
+Before this: led an 8-engineer team through a monolith-to-microservices
+migration on a manufacturing EHS platform (ThoughtFocus), and built KYC/
+payment-gateway integrations handling idempotent retries in financial
+workflows (Novigo Solutions).
+
+## Currently building: RAG systems, from scratch, one layer at a time
+
+Three connected repos, each answering one question a typical "retrieve
+top-k, ask an LLM" tutorial glosses over:
 
 **[rag-microservice](https://github.com/Vinayaganga/rag-microservice)**
 *— what does a RAG engine look like end to end, and how do you know it's
 actually working?*
-Ingestion → embedding (Voyage AI, asymmetric query/document vectors) →
-retrieval → generation, plus a hand-rolled evaluation harness (Hit@k, MRR,
-LLM-as-judge) and hybrid search (BM25 + vector, fused via Reciprocal Rank
-Fusion, re-ranked with Voyage's rerank API).
+Ingestion → embedding (Voyage AI) → retrieval → generation (Claude), plus a
+hand-rolled evaluation harness (Hit@k, MRR, LLM-as-judge) and hybrid search
+(BM25 + vector, fused via Reciprocal Rank Fusion, re-ranked with Voyage's
+rerank API).
 
 **[codebase-rag-assistant](https://github.com/Vinayaganga/codebase-rag-assistant)**
 *— what happens when the documents are code, not prose?*
 Chunks by function/class boundary via tree-sitter (WASM, no native
-compilation) instead of fixed character windows — so retrieval returns a
-whole coherent function, not an arbitrary slice of one.
+compilation) instead of fixed character windows.
 
 **[agentic-rag-assistant](https://github.com/Vinayaganga/agentic-rag-assistant)**
-*— what if the model decided when and how many times to search, instead of
-a fixed one-shot retrieve?*
-A tool-use loop: ask it something that spans two topics and watch the trace
-show two separate searches, not one confused one.
+*— what if the model decided when and how many times to search?*
+A tool-use loop instead of a fixed one-shot retrieve — ask it something
+that spans two topics and the trace shows two separate searches.
 
-## Some of what actually broke
-
-The interesting part usually isn't the feature — it's the bug that revealed
-an assumption was wrong:
-
-- The codebase chunker silently collapsed **every exported function** in a
-  file into one giant "leftover" chunk, because `export function foo() {}`
-  parses as an `export_statement` wrapping the real node, not a bare
-  `function_declaration`. Only caught by ingesting real code and noticing
-  the chunk counts didn't add up.
-- A vector-vs-hybrid-search comparison came back a **flat tie** — both
-  scored 100% Hit@5. Not a bug: the test corpus was still too small for the
-  two methods to ever disagree. Wrote that down instead of hiding it.
-- Free-tier embedding APIs cap you at 3 requests/minute, which you will not
-  find out until you try to ingest more than two documents at once.
-
-Full writeup, with the reasoning behind each architecture choice, in
+Full writeup — architecture decisions and the real bugs found building
+them — in
 **[rag-microservice/PORTFOLIO.md](https://github.com/Vinayaganga/rag-microservice/blob/main/PORTFOLIO.md)**.
+
+## Skills
+
+- **Languages & Runtime:** Node.js, JavaScript/TypeScript, C#, .NET Core, ASP.NET
+- **Cloud & Infrastructure:** AWS (Lambda, API Gateway, DynamoDB, SNS, SQS, CloudWatch), Azure (Service Bus, Key Vault), Docker
+- **Architecture:** Event-driven systems, microservices, serverless, distributed systems, async pipelines, CI/CD
+- **Databases:** DynamoDB (schema design, access patterns), SQL Server, MySQL
+- **Frontend:** React, Angular
+- **AI/GenAI:** RAG pipelines, embeddings, Anthropic SDK, prompt engineering, agentic tool-use
+- **Practices:** Observability, root-cause analysis, system design, production reliability, technical mentorship
+
+## Certifications & Education
+
+- Microsoft Azure Fundamentals Certification Course, 2nd Edition — O'Reilly Media (verified on Credly)
+- Amazon Web Services (AWS), 3rd Edition — O'Reilly Media (verified on Credly)
+- B.E., Computer Science & Engineering — Visvesvaraya Technological University, 2013
