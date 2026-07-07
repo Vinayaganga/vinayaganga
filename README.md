@@ -46,12 +46,29 @@ A few of the numbers behind that:
   rewrite, a NuGet package publishing audit-trail data to AWS Glue, and a
   base framework for incrementally rendering legacy ASP pages through React.
 
-Before this: led an 8-engineer team through a monolith-to-microservices
-migration on a manufacturing EHS platform (ThoughtFocus), including
-re-architecting .NET APIs and optimizing LINQ/SQL Server queries — cutting
-report load times from ~60s to 3–4s. Also built KYC/payment-gateway
-integrations handling idempotent retries in financial workflows (Novigo
-Solutions).
+## Before that: Lead Engineer, ThoughtFocus Technologies
+
+Led a team of 8 engineers building high-availability manufacturing systems.
+
+- **Led a monolith-to-microservices migration** for a manufacturing EHS
+  platform — decomposed a tightly coupled legacy codebase into
+  independently deployable services, letting teams ship without
+  cross-team coordination for the first time.
+- **Architected event-driven processing on Azure Service Bus** — decoupled
+  async workloads across manufacturing modules, eliminating synchronous
+  bottlenecks that caused timeout failures under peak load.
+- **Re-architected reporting APIs and optimized LINQ/SQL Server queries**
+  — eliminated N+1 patterns and missing indexes, cutting report load times
+  from ~60s to 3–4s and removing timeout failures entirely.
+- **Hardened secret management** by migrating credentials to Azure Key
+  Vault — met compliance requirements and removed all plaintext secrets
+  from codebases.
+- **Established team-wide design reviews and code-review standards**,
+  mentoring 3 engineers from task-level execution to system design
+  ownership — two were promoted during tenure.
+
+Earlier: built KYC/payment-gateway integrations handling idempotent retries
+in financial workflows (Novigo Solutions).
 
 ## Currently building: RAG systems, from scratch, one layer at a time
 
