@@ -1,6 +1,6 @@
 ### Vinayaganga Panjaje
 
-Full-Stack Engineer (Node.js/JavaScript) · Staff Engineer · Cloud · System Design
+Senior Software Engineer (Node.js/JavaScript), operating at Staff scope · Cloud · System Design
 
 [vinayaganga@gmail.com](mailto:vinayaganga@gmail.com) · [linkedin.com/in/vinayaganga](https://linkedin.com/in/vinayaganga) · Bangalore, India
 
@@ -31,9 +31,12 @@ A few of the numbers behind that:
   120s) and made the call to redesign it as an async job rather than patch
   around it — cut execution to ~20 minutes and API response time to 2–3s,
   removing a recurring failure mode rather than one incident.
-- Built a notification microservice processing **100,000+ notifications/day**
-  with reliable retries and dead-letter queues, and an append-only
-  audit-trail service with full replay capability for compliance.
+- **Authored the design for the notification and audit-trail microservices**
+  — a template-driven, event-driven (SNS/SQS) notification system processing
+  **100,000+ notifications/day** with reliable retries and dead-letter
+  queues, plus an append-only audit-trail service with full replay
+  capability. Decoupling content from delivery logic in the notification
+  design cut time-to-ship for new notification types by 40%.
 - **Set and enforced code-review/architecture standards for a team of 10**
   — nothing merges without sign-off — and built a structured-pairing
   program that ramped 5+ engineers, including a QA→developer transition.
