@@ -47,9 +47,11 @@ A few of the numbers behind that:
   base framework for incrementally rendering legacy ASP pages through React.
 
 Before this: led an 8-engineer team through a monolith-to-microservices
-migration on a manufacturing EHS platform (ThoughtFocus), and built KYC/
-payment-gateway integrations handling idempotent retries in financial
-workflows (Novigo Solutions).
+migration on a manufacturing EHS platform (ThoughtFocus), including
+re-architecting .NET APIs and optimizing LINQ/SQL Server queries — cutting
+report load times from ~60s to 3–4s. Also built KYC/payment-gateway
+integrations handling idempotent retries in financial workflows (Novigo
+Solutions).
 
 ## Currently building: RAG systems, from scratch, one layer at a time
 
