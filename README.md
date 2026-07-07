@@ -53,7 +53,7 @@ A few of the numbers behind that:
 
 Led a team of 8 engineers building high-availability manufacturing systems.
 
-- **Led a monolith-to-microservices migration** for a manufacturing EHS
+- **Led a monolith-to-microservices migration** for a manufacturing
   platform — decomposed a tightly coupled legacy codebase into
   independently deployable services, letting teams ship without
   cross-team coordination for the first time.
