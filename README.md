@@ -8,11 +8,14 @@ Senior Software Engineer (Node.js/JavaScript), operating at Staff scope · Cloud
 ![AWS](https://img.shields.io/badge/AWS-Lambda_%7C_DynamoDB_%7C_SQS-FF9900?logo=amazonaws&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-Service_Bus_%7C_Key_Vault-0078D4?logo=microsoftazure&logoColor=white)
 
-12 years in, with deep roots in Node.js and the JavaScript/TypeScript
-ecosystem and full-stack range across React, Angular, and cloud-native
-backend architecture. I own problems end to end — from requirement
-discussions through system design to production on-call — and make sure
-the people around me grow along the way.
+**TL;DR:** 12 years shipping backend/cloud systems at production scale
+(AWS, event-driven microservices, 3.5M-user platforms) — now building RAG
+and agentic systems from scratch, one layer at a time, to actually
+understand how they work rather than just call an API.
+
+I own problems end to end — from requirement discussions through system
+design to production on-call — and make sure the people around me grow
+along the way.
 
 ## What I'm doing day to day
 
@@ -96,6 +99,26 @@ _— what if the model decided when and how many times to search?_
 A tool-use loop instead of a fixed one-shot retrieve — ask it something
 that spans two topics and the trace shows two separate searches.
 
+Real output from that last one — one question, two topics, two searches
+the model decided to make on its own:
+
+```
+$ curl -X POST localhost:3002/ask -d '{"query": "Compare how the
+  notification service and billing service each handle repeated
+  failures — how many retries does each allow and how are they timed?"}'
+
+{
+  "trace": [
+    { "tool": "search_documents", "query": "notification service retry failures", "resultCount": 3 },
+    { "tool": "search_documents", "query": "billing service retry failures", "resultCount": 3 }
+  ],
+  "answer": "Notification Service: 3 retries, exponential backoff
+             (1s → 4s → 16s), then dead-letter queue.
+             Billing Service: 3 retries, fixed 48h apart across a
+             7-day grace period, then downgrade to Free tier."
+}
+```
+
 Full writeup — architecture decisions and the real bugs found building
 them — in
 **[rag-microservice/PORTFOLIO.md](https://github.com/Vinayaganga/rag-microservice/blob/main/PORTFOLIO.md)**.
@@ -104,4 +127,4 @@ them — in
 
 Node.js · TypeScript · C#/.NET Core (ASP.NET) · React · Angular · AWS (Lambda, DynamoDB, SNS/SQS, CloudWatch) · Azure (Service Bus, Key Vault) · Event-driven & microservice architecture · DynamoDB/SQL schema design · RAG & agentic tool-use
 
-B.E. Computer Science, Visvesvaraya Technological University — AWS & Azure Fundamentals certified (Credly).
+B.E. Computer Science, Visvesvaraya Technological University.
